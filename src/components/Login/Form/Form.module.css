@@ -1,0 +1,37 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 60vw;
+  min-height: 50vh;
+  background-color: rgb(185, 55, 185);
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 24px;
+  color: white;
+}
+
+.inputContainer input {
+  height: 40px;
+  padding: 5px;
+  outline: none;
+}
+
+input {
+  border: 2px solid rgb(68, 0, 255);
+  background-color: white;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #eee;
+  box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+
+}
