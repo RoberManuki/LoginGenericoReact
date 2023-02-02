@@ -1,3 +1,4 @@
+import swal from "sweetalert";
 import { createContext, useState } from "react";
 
 const usuarioEstadoInicial = {
@@ -18,6 +19,11 @@ type AuthContextType = {
   signIn: (event: any) => void;
 };
 
+type DataResponseType = {
+  token?: string;
+  error?: string;
+};
+
 export const AuthContext = createContext({} as AuthContextType);
 
 export const AuthProvider = ({ children }: any) => {
@@ -26,16 +32,25 @@ export const AuthProvider = ({ children }: any) => {
   async function signIn(event: any) {
     event.preventDefault();
 
-    const response = await fetch("http://localhost:3000", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(usuario),
-    });
-    const data = await response.json();
+    try {
+      const response = await fetch("http://localhost:3000", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(usuario),
+      });
+      // const { token } = await response.json();
 
-    console.log(data);
+      // Exemplo de retorno
+      const { token, error }: DataResponseType = { error: "Deu ruim!" };
+
+      // Validação
+      if (token) swal("Caso tenha token, entra no sistema!");
+      else swal(`"Mostra erro genérico! ${error}`);
+    } catch (_error) {
+      alert("Erro ao conectar no servidor!");
+    }
   }
 
   return (
