@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }: any) => {
       if (token) swal("Caso tenha token, entra no sistema!");
       else swal(`"Mostra erro genérico! ${error}`);
     } catch (_error) {
-      alert("Erro ao conectar no servidor!");
+      swal("Erro ao conectar no servidor!");
     }
   }
 
