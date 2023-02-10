@@ -3,9 +3,12 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 60vw;
   min-height: 50vh;
   background-color: rgb(185, 55, 185);
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 77px 55px 33px 55px;
 }
 
 .inputContainer {
@@ -23,15 +26,16 @@
 }
 
 input {
-  border: 2px solid rgb(68, 0, 255);
-  background-color: white;
-  border-radius: 4px;
-  padding: 10px;
-  margin: 10px 0;
-  border: 2px solid #eee;
-  box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+  font-family: Poppins-Regular;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.2;
+  display: block;
   width: 100%;
-  font-family: inherit;
-  font-size: inherit;
-
+  height: 45px;
+  background: transparent;
+  padding: 0 5px;
+  border: none;
+  border-bottom: groove;
 }
+
