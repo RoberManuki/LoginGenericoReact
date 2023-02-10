@@ -1,4 +1,5 @@
 import swal from "sweetalert";
+import { useNavigate } from "react-router-dom";
 import { createContext, useState } from "react";
 
 const usuarioEstadoInicial = {
@@ -28,29 +29,31 @@ export const AuthContext = createContext({} as AuthContextType);
 
 export const AuthProvider = ({ children }: any) => {
   const [usuario, setUsuario] = useState<UsuarioType>(usuarioEstadoInicial);
+  const navigate = useNavigate();
 
   async function signIn(event: any) {
     event.preventDefault();
 
-    try {
-      const response = await fetch("http://localhost:3000", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(usuario),
-      });
-      // const { token } = await response.json();
+    navigate("/dashboard");
+    // try {
+    //   const response = await fetch("http://localhost:3000", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(usuario),
+    //   });
+    //   // const { token } = await response.json();
 
-      // Exemplo de retorno
-      const { token, error }: DataResponseType = { error: "Deu ruim!" };
+    //   // Exemplo de retorno
+    //   const { token, error }: DataResponseType = { error: "Deu ruim!" };
 
-      // Validação
-      if (token) swal("Caso tenha token, entra no sistema!");
-      else swal(`"Mostra erro genérico! ${error}`);
-    } catch (_error) {
-      swal("Erro ao conectar no servidor!");
-    }
+    //   // Validação
+    //   if (token) swal("Caso tenha token, entra no sistema!");
+    //   else swal(`"Mostra erro genérico! ${error}`);
+    // } catch (_error) {
+    //   swal("Erro ao conectar no servidor!");
+    // }
   }
 
   return (

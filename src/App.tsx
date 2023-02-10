@@ -1,13 +1,15 @@
-import FormLogin from "./components/Login/Form/Form";
+import { MainRoutes } from "./routes/MainRoutes";
+import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./contexts/Auth.context";
-import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 
 function App() {
   return (
     <>
-      <AuthProvider>
-        <FormLogin />
-      </AuthProvider>
+      <BrowserRouter>
+        <AuthProvider>
+          <MainRoutes />
+        </AuthProvider>
+      </BrowserRouter>
     </>
   );
 }

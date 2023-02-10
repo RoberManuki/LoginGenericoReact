@@ -1,3 +1,7 @@
 export default function ForgotPassword() {
-  return <form></form>;
+  return (
+    <form>
+      <h1>Olá</h1>
+    </form>
+  );
 }
