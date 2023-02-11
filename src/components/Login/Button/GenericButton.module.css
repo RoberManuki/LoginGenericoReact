@@ -1,3 +1,19 @@
 .submitButton {
-    margin-top: 25px;
+    margin: 25px 50px 0 50px;
+    border-radius: 9999px;
+    display: flex;
+    width: 60%;
+    font-size: 1.25rem;
+    background-color: #fff;
+    border-color: #dbdbdb;
+    border-width: 1px;
+    color: #363636;
+    cursor: pointer;
+    justify-content: center;
+    padding-left: calc(1em + 0.25em);
+    padding-right: calc(1em + 0.25em);
+    padding-bottom: calc(0.5em - 1px);
+    padding-top: calc(0.5em - 1px);
+    text-align: center;
+    white-space: nowrap;
 }

@@ -14,18 +14,7 @@ export default function FormLogin() {
 
   return (
     <form className={styles.form} onSubmit={signIn}>
-      <div className={styles.inputContainer}>
-        <label htmlFor="terminal">Terminal:</label>
-        <input
-          type="text"
-          name="terminal"
-          id="terminal"
-          placeholder="Digite o código do terminal"
-          required
-          value={usuario.terminal}
-          onChange={handleInput}
-        />
-      </div>
+      <h4 className={styles.labelLogin}>Welcome!</h4>
 
       <div className={styles.inputContainer}>
         <label htmlFor="email">E-mail:</label>

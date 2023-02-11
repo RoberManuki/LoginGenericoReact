@@ -1,28 +1,37 @@
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   min-height: 50vh;
   background-color: rgb(185, 55, 185);
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  padding: 77px 55px 33px 55px;
+  padding: 0px;
+  height: 100%;
+  width: 500px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(99, 0, 31);
+  color: #fff!important;
 }
 
 .inputContainer {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  font-size: 24px;
+  font-size: 21px;
   color: white;
+  margin-bottom: 35px;
 }
 
 .inputContainer input {
   height: 40px;
   padding: 5px;
   outline: none;
+  width: 270px;
 }
 
 input {
@@ -37,5 +46,11 @@ input {
   padding: 0 5px;
   border: none;
   border-bottom: groove;
+}
+
+.labelLogin {
+  font-size: 72px;
+  text-align: center;
+  margin-bottom: 45px;
 }
 
